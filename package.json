@@ -47,5 +47,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lvenerosy/vsc-selection-range-and-cursor-position-toggle.git"
-  }
+  },
+  "publisher": "Erebnyx"
 }
