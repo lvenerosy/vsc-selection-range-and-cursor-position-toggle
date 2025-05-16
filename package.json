@@ -1,0 +1,47 @@
+{
+  "name": "selection-range-and-toggle-cursor-position",
+  "displayName": "Selection Range and Selection Cursor Position Toggle",
+  "description": "Extension for bulk selecting line ranges and toggling cursor position in selections",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.selectRange",
+        "title": "Selection Line Range"
+      },
+      {
+        "command": "extension.toggleCursorPosition",
+        "title": "Toggle Cursor Position in Selection"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.selectRange",
+        "key": "alt+g",
+        "mac": "alt+g"
+      },
+      {
+        "command": "extension.toggleCursorPosition",
+        "key": "ctrl+k ctrl+a",
+        "mac": "cmd+k cmd+a"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^16.11.7",
+    "typescript": "^4.9.5"
+  }
+}
